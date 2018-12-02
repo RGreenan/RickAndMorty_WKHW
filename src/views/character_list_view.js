@@ -12,14 +12,14 @@ CharacterListView.prototype.bindEvents = function () {
   });
 };
 
-
 // // TODO:
 CharacterListView.prototype.render = function () {
   const characterList = document.createElement('div');
   characterList.setAttribute('class', 'character-list');
   this.container.appendChild(characterList);
+  console.log(characterList);
 
-  this.characters.forEach((character) => {
+  this.characters.forEach(() => {
     const characterView = new CharacterView(this.container, character);
     characterView.render();
   })

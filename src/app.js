@@ -6,10 +6,11 @@ const CharacterView = require('./views/character_view')
 document.addEventListener('DOMContentLoaded', () => {
   console.log('JavaScript Loaded');
 
-  const charContainer = document.querySelector('.index-contents');
-  const charView = new CharacterListView(charContainer);
-  charView.bindEvents();
+  const characterContainer = document.querySelector('.index-contents');
+  const characterView = new CharacterListView(characterContainer);
+  characterView.bindEvents();
 
   const characters = new Characters();
   characters.getData();
+  console.log(characters);
 })
